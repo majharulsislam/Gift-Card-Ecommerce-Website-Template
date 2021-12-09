@@ -1,0 +1,1296 @@
+ ----------------------------------------------------------------------------------------
+Author       : Boost Design
+Template Name: Gift Card
+Version      : 1.0
+ ---------------------------------------------------------------------------------------- */
+
+/* 01. Reset CSS
+=============================================================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	background: transparent;
+}
+
+img{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	background: transparent;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin:  0;
+    padding: 0;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+a:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+}
+/* Reset CSS End
+===============================================================*/
+@font-face {
+    font-family: ProductSans-Bold;
+    src:url("../fonts/ProductSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: ProductSans-Regular;
+    src:url("../fonts/ProductSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: ProductSans-Italic;
+    src:url("../fonts/ProductSans-Italic.ttf");
+}
+
+/* 02. Font CSS Start
+=============================================================== */
+
+
+h1,
+h2,
+h3,
+ul,body {
+    font-family: ProductSans-Regular;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 80px;
+    color: #707070;
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 51px;
+    color: #707070;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #333;
+}
+
+/* Font CSS End
+=============================================================== */
+
+
+/* 03. General CSS
+=============================================================== */
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    word-wrap: break-word;
+    text-decoration: none !important;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* General Css End
+=============================================================== */
+
+.section-padding{
+    padding: 0 65px;
+}
+
+.color_g{
+    color: #14A800 !important;
+}
+
+
+/*input label top*/
+textarea:hover, 
+select:hover, 
+input:hover, 
+textarea:active,
+select:active,
+input:active, 
+textarea:focus,
+select:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+.check_input_wrap input:focus + label, .check_input_wrap input:valid + label{
+      font-size: 14px;
+      color: #033333;
+      top: -10px;
+      left:62px;
+      background: #ffffff;
+      padding: 0px 5px 0px 5px;
+}
+.check_input_wrap{
+    position: relative;
+}
+.check_input_wrap label{
+    font-size: 18px;
+    line-height: 22px;
+    color: #033333;
+    padding: 28px 62px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+    pointer-events: none;
+}
+/*input label top end*/
+
+
+/* Home page Css
+=============================================================== */
+
+/*top header*/
+.top_header_area {
+    background: #138504;
+    padding: 14px 0;
+    color: #fff;
+}
+.top_head_menu ul li {
+    padding: 0px 15px;
+}
+.top_head_menu ul li a {
+    font-size: 14px;
+    line-height: 19px;
+    color: #fff;
+}
+
+/*bottom header*/
+.bottom_header_area {
+    background: #14A800;
+    padding: 23px 0 22px;
+}
+.bottom_head_menu ul {
+    padding: 0;
+    margin: 0;
+}
+.bottom_head_menu ul li a {
+    display: block;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 6px 28px 8px 28px;
+}
+.bottom_head_menu ul li.active a {
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+}
+.search_bar{
+    width: 222px;
+    margin-right: 35px;
+}
+.search_bar .pseudo-search {
+  display: inline-block;
+  background: #fff;
+  border-radius: 100px;
+  padding: 10px 15px;
+
+}
+.search_bar .pseudo-search input {
+    border: 0;
+    background-color: transparent;
+    width: 160px;
+    font-size: 14px;
+    line-height: 19px;
+}
+.search_bar .pseudo-search input:focus{
+    outline: none;
+}
+.search_bar .pseudo-search button, .search_bar .pseudo-search i {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.carted_icon {
+    position: relative;
+}
+.carted_icon a span {
+    position: absolute;
+    background: #fff;
+    color: #138504;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    left: -10px;
+    top: -5px;
+}
+
+/*banner*/
+.banner_area {
+    background: url(../img/banner/banner-bg.png);
+    background-repeat: no-repeat;
+    padding: 65px 0 68px;
+}
+.banner_text p {
+    font-size: 18px;
+    line-height: 25px;
+    color: #707070;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.banner_btn a{
+    font-size: 18px;
+    line-height: 24px;
+    background: #14A800;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 34px;
+}
+.banner_area .single_slide_item{
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+.banner_area .slick-dots li.slick-active{
+    background: #14A800;
+    width: 34px;
+    height: 10px;
+    border-radius: 5px;
+}
+.banner_area .slick-dots{
+    bottom: -70px;
+}
+.banner_area .slick-dots li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #C9C9C9;
+}
+.banner_area .slick-dots li button:before{
+    content: none;
+}
+.banner_area .slick-list.draggable {
+    height: auto !important;
+}
+
+/*most popular gift card*/
+.most_popular_gift_card_area {
+    padding: 40px 0 80px;
+}
+.most_popular_header{
+    margin-bottom: 30px;
+}
+.most_popular_header a {
+    font-size: 18px;
+    line-height: 24px;
+    color: #14A800;
+    text-decoration-line: underline !important;
+}
+.single_gift_card_item {
+    margin-bottom: 30px;
+}
+.giftcard-body p span {
+    color: #EA4538;
+}
+p.giftcard-title {
+    font-family: 'ProductSans-Bold';
+    margin: 15px 0 10px;
+}
+.giftcard-body p.color_g {
+    margin-top: 5px;
+}
+.gift_coins {
+    border: 1px dashed #707070;
+    position:relative;
+    padding: 12px 10px 5px;
+    margin-top: 10px;
+}
+.gift_coins p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #EA4538;
+}
+.gift_coins p img {
+    margin-right: 8px;
+}
+.gift_coins p.coin_title {
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #333333;
+    position: absolute;
+    background: #fff;
+    top: -9px;
+    left: 20px;
+}
+
+/*footer*/
+.footer_top_area {
+    background: #707070;
+    padding: 35px 0 40px;
+}
+.footer_top_area ul {
+    padding: 0;
+    margin: 0;
+}
+.footer_top_area h3 {
+    font-family: 'ProductSans-Bold';
+    color: #fff;
+    margin-bottom: 15px;
+}
+.footer_top_area ul li a {
+    display: block;
+    color: #fff;
+    line-height: 30px;
+}
+.footer_connect_menu p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #fff;
+}
+.contact_us_icon {
+    margin: 20px 0;
+}
+.contact_us_icon p, .subscribe_newsletter p {
+    line-height: 30px;
+}
+.contact_us_icon ul li a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.subscribe_newsletter .pseudo-search {
+    margin-top: 5px;
+}
+
+.subscribe_newsletter .pseudo-search button {
+    background: #14A800;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+}
+.footer_bottom {
+    background: #138504;
+    padding: 10px 0;
+}
+
+.footer_bottom p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+}
+
+
+/* Sign in page Css
+=============================================================== */
+.sign_in_banner {
+    background: url(../img/banner/sign-in-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px 0 20px;
+}
+.sign_head_title h2 {
+    font-family: 'ProductSans-Bold';
+    color: #fff;
+}
+.breadcam_page_show {
+    margin-top: 50px;
+}
+.breadcam_page_show p {
+    color: #fff;
+}
+.breadcam_page_show p a {
+    color: #fff;
+    margin-left: 5px;
+}
+.breadcam_page_show p img {
+    margin: 0 5px;
+}
+
+/*signing*/
+.gift_card_signing_area {
+    margin-top: 50px;
+    margin-bottom: 229px;
+}
+.signup_box {
+    max-width: 520px;
+    margin: 0 auto;
+}
+#inputmr{
+    margin-bottom: 30px;
+}
+.signup_box .check_input_wrap input {
+    padding: 25px 25px 24px 60px;
+}
+.forgot_pass {
+    text-align: right;
+    margin-top: 6px;
+}
+.forgot_pass a {
+    font-size: 14px;
+    line-height: 18px;
+    color: #333333;
+    text-decoration-line: underline !important;
+}
+.signin_check{
+    margin-top: 6px;
+}
+.signbtn {
+    margin: 44px 0 50px;
+}
+.signbtn input {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #14A800;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 17px 0 21px;
+    font-family: 'ProductSans-Bold';
+}
+.signin_new h2 {
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+    margin-bottom: 6px;
+    font-family: 'ProductSans-Bold';
+}
+.signin_new a {
+    font-size: 18px;
+    line-height: 24px;
+    color: #333333;
+}
+.crac {
+    margin-top: 21px;
+}
+.crac a {
+    font-size: 24px;
+    line-height: 32px;
+    color: #14A800;
+    text-transform: uppercase;
+    text-decoration-line: underline !important;
+    font-family: 'ProductSans-Bold';
+}
+.back_login a {
+    font-size: 14px;
+    line-height: 18px;
+    color: #333333;
+    text-decoration-line: underline !important;
+}
+.signin_check.create_check label {
+    font-size: 12px;
+    line-height: 25px;
+}
+.reset_pass_text {
+    padding: 0 50px 10px;
+}
+.reset_pass_text p {
+    font-size: 14px;
+    line-height: 25px;
+    color: #333333;
+}
+h1.reset_pass_title {
+    margin: 0;
+    margin-top: 6px;
+}
+.signbtn.reset_btn {
+    margin: 0px 0 30px;
+}
+.signbtn.create_btn{
+    margin: 25px 0 29px;
+}
+.gift_card_signing_area .check_input_wrap span img {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 30px;
+}
+.gift_card_signing_area span.lock img {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 25px;
+    left: inherit;
+    cursor: pointer;
+    background: #fff;
+    padding: 4px;
+}
+
+/*create account*/
+.create_account_area {
+    margin-bottom: 70px;
+}
+.create_account .signin_check label {
+    font-size: 12px;
+    line-height: 25px;
+}
+.create_account .signbtn {
+    margin: 29px 0 28px;
+}
+.create_ac_continue h3 {
+    line-height: 24px;
+    color: #333;
+    font-family: 'ProductSans-Bold';
+    margin-right: 12px;
+}
+.create_continue_with_icon ul li {
+    margin-right: 19px;
+}
+.create_continue_with_icon ul li a {
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: #14A800;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+}
+.back_to_login.text-center a {
+    font-size: 14px;
+    line-height: 19px;
+    color: #333;
+    text-decoration-line: underline !important;
+}
+
+/*reset pass*/
+.reset_password_area {
+    margin-top: 105px;
+    margin-bottom: 350px;
+}
+.reset_password_area .signbtn{
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+/*this code for custom checkbox*/
+.signin_check label {
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+.signin_check input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+.signin_check label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #707070;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,0.16);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+  border-radius: 2px;
+}
+.signin_check input:checked + label:after {
+  content: url(../img/icons/check.svg);
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  transform: rotate(10deg);
+}
+/*end custom checkbox
+
+/*custom radio input*/
+.remember_radio input[type="radio"] {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #707070;
+    color: #b93e3e;
+    background-color: transparent;
+    box-shadow: inset 0px 2px 3px rgba(0,0,0,0.16);
+    cursor: pointer;
+}
+.remember_radio input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.remember_radio input[type="radio"]:checked::before {
+    content: " ";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: none;
+    background-color: #14a800;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.16);
+    left: 1px;
+    top: 1px;
+}
+/*end custom radio*/
+
+
+/* Faqs page Css
+=============================================================== */
+.faqs_filter_accordion_area {
+    margin: 30px 0 65px;
+}
+.gift_card_faqs_item h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'ProductSans-Bold';
+    color: #2A2A2A;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+.gift_card_faqs_item p {
+    color: #2A2A2A;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+.gift_card_faqs_item .accordion-body {
+    padding: 0 0 0 35px;
+}
+
+/* Style the tab */
+.gift_card_faqs_item .tab button {
+    border: 1px solid #14A800;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+    background: transparent;
+    font-size: 16px;
+    line-height: 21px;
+    color: #2A2A2A;
+    padding: 12px 29px 14px 30px;
+    margin-right: 30px;
+}
+/* Create an active/current "tab button" class */
+.gift_card_faqs_item .tab button.activatetab{
+    color: #fff;
+    background: #14A800;
+}
+/* Style the tab content */
+.gift_card_faqs_item .tabcontent {
+  display: none;
+}
+.gift_card_faqs_item .tabcontent.opentab{
+    display: block;
+}
+.gift_card_faqs_item button.accordion-button{
+    line-height: 5px;
+    font-size: 16px;
+    font-family: 'ProductSans-Bold';
+    color: #2A2A2A;
+    padding-left: 30px;
+}
+
+/*faqs accordion before (+,-)*/
+.accordion-item, .accordion-button:not(.collapsed){
+    border: none;
+    background: none;
+    box-shadow: none;
+    rotate: none;
+    transform: none;
+}
+.accordion-button:not(.collapsed)::after,.accordion-button::after{
+    background-image: none;
+    content: none;
+}
+.accordion-button::before{
+    content: url(../img/icons/plus.svg);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -7px;
+}
+.accordion-item [aria-expanded="true"]::before{
+    content: "";
+    margin-top: 0px;
+    width: 14px;
+    height: 1px;
+    background: #333333;
+}
+
+
+/* Category page Css
+=============================================================== */
+
+.online_gift_card_categody_area {
+    margin: 30px 0 60px;
+}
+.gift_card_category .category_btn {
+    margin-bottom: 30px;
+}
+.gift_card_category .category_btn button {
+    border-color: #707070;
+    border-radius: inherit;
+}
+#Aesthetics .col-md-3, #Aromatherapy .col-md-3,#Hydrotherapy .col-md-3, #MassageTreatment .col-md-3, #OrganicSpa .col-md-3{
+    display: none;
+}
+
+/*loading button*/
+.loading_btn{
+    margin-top: 10px;
+}
+.loading_btn a {
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+}
+.loading_btn a img {
+    margin-right: 12px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+/* Gift Card details Css
+=============================================================== */
+.gift_card-detials_area {
+    margin: 28px 0 60px;
+}
+.gift_box_title p {
+    font-family: 'ProductSans-Bold';
+    display: inline-block;
+    border-bottom: 3px solid #14A800;
+    padding-bottom: 10px;
+}
+.gift_box_title p img {
+    margin-right: 10px;
+}
+.egift_card_area h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'ProductSans-Bold';
+    color: #333333;
+    margin-top: 5px;
+}
+.denomination_btn button {
+    font-size: 16px;
+    line-height: 21px;
+    background: none;
+    border: 1px solid #707070;
+    border-radius: 3px;
+    padding: 9px 29px 10px;
+    margin-right: 8px;
+}
+.denomination_btn button.active{
+    background: #14A800;
+    color: #fff;
+}
+.denomination_quantity {
+    margin-top: 28px;
+}
+.denomination_quantity label {
+    font-size: 14px;
+    line-height: 19px;
+    color: #333;
+}
+.denomination_quantity input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #707070;
+}
+p.label_sm {
+    margin: 0;
+    text-align: right;
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 4px;
+}
+.denomination_deliver_opt {
+    margin-top: 10px;
+}
+.denomination_deliver_opt p, .gift_card-detials_area p.head {
+    margin-bottom: 13px;
+    font-family: 'ProductSans-Bold';
+}
+.denomination_deliver_opt label p {
+    font-family: inherit;
+    margin-left: 13px;
+}
+.egift_card_offer_info p {
+    line-height: 30px;
+}
+.egift_card_offer_info p span {
+    color: #EA4538;
+}
+.egift_card_offer_info p img {
+    margin-right: 12px;
+}
+.egift_card_form_opt_area {
+    margin-top: 25px;
+}
+.deliver_mode_opt {
+    margin-bottom: 40px;
+}
+.egift_card_form_opt_area .remember_radio label {
+    margin: 0 25px 0 8px;
+}
+.egift_card_form_opt_area input::placeholder, .egift_card_form_opt_area textarea {
+    font-size: 14px;
+    color: #333333;
+}
+.egift_card_form_opt_area .form-group input, .egift_card_form_opt_area .form-group textarea{
+    padding: 12px 20px 14px;
+}
+.gifting_details_mb{
+    margin-bottom: 25px;
+}
+.personalize_preview_card_area{
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+.personalize_preview_box {
+    border: 1px dashed #707070;
+    padding: 30px;
+    position: relative;
+}
+.personalize_preview_card_area p.head {
+    margin-bottom: 35px;
+}
+.personalize_preview_box p.top_badge {
+    position: absolute;
+    top: -16px;
+    background: #fff;
+    border: 1px dashed #707070;
+    padding: 4px 12px 6px 13px;
+    font-family: 'ProductSans-Bold';
+}
+.weeding_themes_area p.head {
+    margin: 15px 0;
+}
+.weedingsm_single_slide, .weedingbig_single_slide {
+    margin-right: 11px;
+}
+
+/*custom slick dot*/
+.weeding_themes_area .slick-dots li{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #C9C9C9;
+}
+.weeding_themes_area .slick-dots li.slick-active{
+    background: #14A800;
+    width: 25px;
+    height: 5px;
+    border-radius: 3px;
+}
+.weeding_themes_area .slick-dots li button:before{
+    content: none;
+}
+/*end slick dot*/
+
+.preview_box_text p{
+    margin: 0;
+}
+.preview_box_text p.head {
+    margin: 18px 0 13px;
+}
+.preview_box_text p.it {
+    font-size: 18px;
+    font-family: ProductSans-Italic;
+    line-height: 24px;
+    margin: 5px 0 15px;
+}
+.validity_card {
+    margin-right: 30px;
+}
+.validity_card p {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 13px 0 0;
+}
+.validity_card_text h3 {
+    font-size: 28px;
+    line-height: 37px;
+    font-family: 'ProductSans-Regular';
+    color: #333333;
+}
+.validity_card_text p {
+    font-family: 'ProductSans-Bold';
+    margin: 0;
+}
+.card_number {
+    margin-bottom: 28px;
+}
+.pay_now_btn a {
+    width: 300px;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'ProductSans-Bold';
+    background: #14A800;
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px 0 8px;
+    margin-top: 48px;
+}
+
+.gift_card_bottom_desc_area button {
+    font-size: 14px;
+    line-height: 19px;
+    font-family: 'ProductSans-Bold';
+    border: none;
+    background: none;
+    padding: 0 0 10px;
+    margin-right: 90px;
+}
+.gift_card_bottom_desc_area .tab button.activatetab{
+    border-bottom: 3px solid #14A800;
+}
+.gift_card_bottom_desc_area p {
+    margin: 30px 0 0;
+    line-height: 25px;
+}
+.gift_card_bottom_desc_area .tabcontent {
+  display: none;
+}
+.gift_card_bottom_desc_area .tabcontent.opentab{
+    display: block;
+}
+
+
+/* My account information page Css
+=============================================================== */
+.personal_info_area {
+    margin-top: 86px;
+    margin-bottom: 400px;
+}
+.personal_info_left_side .profile_img {
+    background: #14A800;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    margin-right: 25px;
+}
+.personal_info_left_side {
+    margin-right: 18px;
+}
+.personal_info_right_side {
+    margin-left: 18px;
+    margin-top: 95px;
+}
+.profile_header p {
+    font-size: 16px;
+    line-height: 21px;
+    font-family: 'ProductSans-Bold';
+    margin: 0;
+    color: #272525;
+}
+.profile_header h2, .personal_info_right_side h2 {
+    font-size: 28px;
+    line-height: 37px;
+    font-family: 'ProductSans-Bold';
+    color: #272525;
+}
+.personal_info_right_side h2{
+    line-height: 32px;
+    margin-bottom: 25px;
+}
+.personal_info_menu{
+    margin-top:32px;
+}
+.personal_info_menu ul {
+    padding: 0;
+}
+.personal_info_menu ul li a {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    color: #272525;
+    padding: 15px 20px;
+    border-bottom: 1px solid #AEAEAE;
+}
+.personal_info_menu ul li.active a {
+    font-family: 'ProductSans-Bold';
+    background: #14A800;
+    color: #fff;
+    border-radius: 3px;
+}
+.personal_info_form input {
+    padding: 15px 20px 16px;
+}
+.personal_info_form .check_input_wrap label {
+    padding: 18px 20px;
+    color: #272525;
+}
+.personal_info_form .check_input_wrap input:focus + label, .personal_info_form .check_input_wrap input:valid + label {
+    left: 20px;
+}
+.personal_info_form button {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'ProductSans-Bold';
+    border: none;
+    background: #14A800;
+    width: 100%;
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px 0 13px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+    margin-top: 30px;
+}
+
+
+/* My rewards page Css
+=============================================================== */
+.rewards_wallet h3 {
+    line-height: 24px;
+    font-family: 'ProductSans-Bold';
+    color: #272525;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+.rewards_wallet p {
+    font-size: 29px;
+    line-height: 38px;
+    font-family: 'ProductSans-Bold';
+    color: #272525;
+    margin: 0;
+}
+.rewards_wallet p img {
+    margin-right: 11px;
+}
+.wallet_log {
+    margin-top: 50px;
+}
+.wallet_log a {
+    font-size: 16px;
+    line-height: 21px;
+    color: #14A800;
+    font-family: 'ProductSans-Bold';
+    text-transform: uppercase;
+}
+.wallet_log a img {
+    margin-right: 15px;
+}
+
+/* My orders page Css
+=============================================================== */
+.my_orders_area h2 {
+    font-size: 18px;
+    line-height: 24px;
+}
+.data_table_area .table{
+    margin-bottom: 40px;
+}
+.data_table_area .table tr th, .data_table_area .table tr td, .data_table_area .table tr td a {
+    font-size: 14px;
+    line-height: 19px;
+    color: #272525;
+    padding-left: 0;
+}
+.data_table_area .table tr td, .data_table_area .table tr td a{
+    font-family: 'ProductSans-Regular';
+    border: none;
+}
+.data_table_area .table tr td a:first-child{
+    margin-right: 70px;
+}
+
+.data_table_area table.dataTable.no-footer{
+    border: none;
+}
+.data_table_area {
+    position: relative;
+}
+.data_table_area #mydatatable_paginate {
+    display: none;
+}
+.data_table_area #mydatatable_length {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #272525;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: 'ProductSans-Regular';
+}
+#mydatatable_length select {
+    appearance: none;
+    width: 30px;
+    text-align: center;
+}
+.data_table_area #mydatatable_info {
+    padding-top: 0;
+    font-size: 14px;
+    line-height: 19px;
+    color: #272525;
+    font-family: 'ProductSans-Regular';
+}
+
+/* Account setting page Css
+=============================================================== */
+.account_setting h3 {
+    line-height: 24px;
+    font-family: 'ProductSans-Bold';
+    color: #272525;
+    margin-bottom: 17px;
+}
+.account_setting h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-family: 'ProductSans-Bold';
+    margin-bottom: 8px;
+}
+.account_address_book {
+    margin-top: 75px;
+}
+.account_address_book p a {
+    color: #333;
+}
+
+/* Manage Address page Css
+=============================================================== */
+.manage_address h2{
+    font-size: 24px;
+}
+.personal_info_form textarea{
+    font-size: 18px;
+    line-height: 22px;
+    color: #272525;
+    padding: 18px 20px;
+}
+.personal_info_form .custom_radio_in input {
+    padding: inherit;
+}
+.personal_info_form .remember_radio label p{
+    font-size: 18px;
+    font-family: 'ProductSans-Bold';
+    margin-left: 10px;
+    cursor: pointer;
+}
+.personal_info_form .remember_radio input[type="radio"]{
+    width: 17px;
+    height: 17px;
+}
+.personal_info_form .remember_radio input[type="radio"]:checked::before{
+    top: 2px;
+    left: 2px;
+}
+.new_address_btn p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #14A800;
+    cursor: pointer;
+}
+.new_address_btn p img {
+    margin-right: 14px;
+}
+.manage_address{
+    position: relative;
+}
+.manage_form {
+    background: #fff;
+    position: absolute;
+    top: 70%;
+    display: none;
+    transition: 0.8s ease;
+}
+.manage_form.active{
+    display: block;
+}
